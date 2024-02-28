@@ -112,7 +112,7 @@ Here's a hint to get you started: we recommend using `ggplot2`. Look up how to i
 library(ggplot2)
 destination_df <- as.data.frame(possible_destinations)
 ggplot(stack(destination_df), aes(x = ind, y = values)) +
-  geom_boxplot()
+  geom_boxplot() + labs(x= "City", y= "Temperature (F)") + ggtitle("Weekly Temperatures in Different Cities")
 ```
 
 ### Keep Exploring
