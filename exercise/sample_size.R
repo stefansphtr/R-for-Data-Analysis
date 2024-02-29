@@ -1,7 +1,7 @@
 # Function to calculate sample size
 calculate_sample_size <- function(population_size, confidence_level, margin_of_error) {
     z_score <- qnorm((1 + confidence_level) / 2)
-    p <- 0.5  # Assuming maximum variability (p=0.5) to ensure a large enough sample size
+    p <- 0.8  # The minimum statistical power required is 80% (0.8) to ensures a high likelihood of identifying a true effect 
     
     numerator <- z_score^2 * p * (1 - p)
     denominator <- margin_of_error^2
