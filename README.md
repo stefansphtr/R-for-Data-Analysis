@@ -3,9 +3,6 @@
 ---
 This is a repository for the `R for Data Analysis` course that I learned at [Codecademy](https://codecademy.com).
 
-## Table of Contents
-`Under Construction`
-
 ### List of useful RSudio Keyboard Shortcuts
 
 - **Ctrl + Enter**: Run current line/selection. This command is used to execute the current line or the selected lines in your script.
