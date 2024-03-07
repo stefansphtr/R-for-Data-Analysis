@@ -1,0 +1,63 @@
+---
+title: "Tea and Chocolate Analysis"
+author: "Stefanus Bernard Melkisedek"
+date: "2024-03-07"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Load the library and data
+
+```{r load library}
+library(tidyverse)
+```
+
+```{r load data}
+flavors_df <- read_csv("./data/flavors_of_cacao.csv")
+```
+
+## Data Wrangling
+
+### View Data
+
+Check the first six rows of the dataset, the structure of the dataset, and the colum names of the dataset.
+
+```{r show head}
+head(flavors_df)
+```
+
+```{r show structure}
+str(flavors_df)
+```
+
+```{r show column names}
+colnames(flavors_df)
+```
+
+### Clean Data
+
+Rename the column name of Company \n(Maker-if known) to Brand
+
+```{r rename column}
+flavors_df <- flavors_df %>% 
+  rename(Brand = Company..Maker.if.known.)
+```
+
+Select the Rating, Cocoa.Percent, and Company and save to the new variable
+
+```{r select main focus}
+trimmed_flavors_df <- flavors_df %>% 
+  select(Rating, Cocoa.Percent, Brand)
+```
+
+
+
+
+
