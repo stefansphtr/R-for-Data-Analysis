@@ -1,0 +1,46 @@
+---
+Title: "R for Data Science"
+Author: "Stefan"
+Output: html_notebook
+---
+
+# For loop
+
+```{r}
+numbers <- c(1.5, 3, 2, 4, 3, 0.25, 3)
+product <- 1
+
+# write loop code here:
+for (num in numbers) {
+    product <- product * num
+}
+
+print(product)
+```
+
+# While loop
+
+```{r}
+numbers <- c(1.5, 3, 2, 4, 3, 5, 3)
+product <- 1
+i <- 1
+
+# write loop code here:
+while (numbers[i] != 5) {
+    product <- product * numbers[i]
+    i <- i + 1
+}
+
+print(product)
+```
+
+# Define function
+
+```{r}
+meters_to_feet <- function(meters) {
+    feet <- meters * 3.28084
+    return(feet)
+}
+
+meters_to_feet(5)
+```

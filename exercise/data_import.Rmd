@@ -1,0 +1,47 @@
+---
+title: "Data Basic with readr"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+Import the dataset using readr and base R function
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+data(mtcars)
+```
+
+```{r}
+mtcars
+```
+
+```{r}
+readr_example()
+```
+
+```{r}
+df_car <- read_csv(readr_example("mtcars.csv"))
+
+# Get the column spesification
+spec(df_car)
+
+# Preview the structure of the data
+head(df_car)
+str(df_car)
+glimpse(df_car)
+
+# Check the column names
+colnames(df_car)
+```
+
+```{r}
+```
+
+```{r}
